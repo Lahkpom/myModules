@@ -1,3 +1,3 @@
-module module github.com/Lahkpom/myModules
+module github.com/Lahkpom/myModules
 
 go 1.22.4
