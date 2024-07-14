@@ -8,7 +8,7 @@ type course struct {
 	IsFree  bool
 	UserIDs []uint
 	// Classes map[uint]string
-	Classes []Class
+	Classes []class
 }
 
 // El constructor devuelve un puntero para que pueda utilizarse en la versión original para efectuar cambios, sino
@@ -36,8 +36,8 @@ func NewCourse(name string, price float64, isFree bool) (a *course) {
 func (c course) PrintClasses() {
 	fmt.Println("Las clases de este curso son:")
 	for _, class := range c.Classes {
-		fmt.Println(class.Name)
-		fmt.Println(class.Description)
+		fmt.Println(class.name)
+		fmt.Println(class.description)
 		fmt.Println("==================================")
 	}
 }
@@ -45,4 +45,10 @@ func (c course) PrintClasses() {
 // ChangePrice() Recibe un valor y lo actualiza en el precio
 func (c *course) ChangePrice(newPrice float64) {
 	c.Price = newPrice
+}
+
+// AddClass() Recibe name y description de una clase para crearla y añadirla a la lista de clases
+func (c *course) AddClass(name string, description string) {
+	newClass := NewClass(name, description)
+	c.Classes = append(c.Classes, *newClass)
 }
