@@ -46,6 +46,11 @@ func (c *course) ChangePrice(newPrice float64) {
 	c.price = newPrice
 }
 
+// GetPrice() Retorna el contenido de la variable price
+func (c *course) GetPrice() float64 {
+	return c.price
+}
+
 // AddClass() Recibe name y description de una clase para crearla y añadirla a la lista de clases
 func (c *course) AddClass(name string, description string) {
 	newClass := NewClass(name, description)
