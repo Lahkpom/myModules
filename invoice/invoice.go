@@ -1,8 +1,8 @@
 package invoice
 
 import (
-	"github.com/Lahkpom/myModules/ex.3.2/customer"
-	"github.com/Lahkpom/myModules/ex.3.2/invoiceitem"
+	"github.com/Lahkpom/myModules/customer"
+	"github.com/Lahkpom/myModules/invoiceitem"
 )
 
 // Invoice contains the information of an invoice
